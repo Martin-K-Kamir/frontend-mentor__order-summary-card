@@ -24,6 +24,6 @@ I tried to make the card responsive for the smallest mobiles, but I know that th
 - Live Site URL - [Link](https://order-summary-card-martin-kamir.netlify.app/)
 - Website - [Martin Kamír](https://martinkamir.com/)
 - Frontend Mentor - [@Martin-K-Kamir](https://www.frontendmentor.io/profile/Martin-K-Kamir)
-- Frontend Mentor Solution - [@Martin-K-Kamir](https://www.frontendmentor.io/profile/Martin-K-Kamir)
+- Frontend Mentor Solution - [@Martin-K-Kamir](https://www.frontendmentor.io/solutions/react-scss-flexbox-css-grid-23AkznVbe)
 
 Happy coding! 😄
