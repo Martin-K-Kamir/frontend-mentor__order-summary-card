@@ -3,6 +3,7 @@
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0 4rem 4rem hsl(228, 87%, 39%, 15.18%);
+  animation: show-in .5s;
 
   @include mq-max($phone-max) {
     width: 32.7rem;
@@ -131,5 +132,17 @@
     @include mq-max($phone-min) {
       margin-top: 1rem;
     }
+  }
+}
+
+@keyframes show-in {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
