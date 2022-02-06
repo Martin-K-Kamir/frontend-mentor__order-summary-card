@@ -1,6 +1,6 @@
 # Frontend Mentor - Order summary card solution
 
-![preview of order summary card](./app/desktop-preview.jpg)
+![preview of order summary card](./desktop-preview.jpg)
 
 This is a challenge from [Frontend Mentor](https://www.frontendmentor.io/). Coded by [me](https://www.frontendmentor.io/profile/Martin-K-Kamir)! 😁
 
@@ -21,7 +21,7 @@ I tried to make the card responsive for the smallest mobiles, but I know that th
 
 ### Links
 
-- Live Site URL - [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL - [Link](https://order-summary-card-martin-kamir.netlify.app/)
 - Website - [Martin Kamír](https://martinkamir.com/)
 - Frontend Mentor - [@Martin-K-Kamir](https://www.frontendmentor.io/profile/Martin-K-Kamir)
 - Frontend Mentor Solution - [@Martin-K-Kamir](https://www.frontendmentor.io/profile/Martin-K-Kamir)
