@@ -1,0 +1,27 @@
+html {
+  font-size: 62.5%;
+}
+
+.body-container {
+  position: relative;
+  min-height: 100vh;
+  font-family: $font-default;
+  font-size: $fs-default;
+  font-weight: $fw-default;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+
+  background-color: $clr-primary;
+  background-image: url("../imgs/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  @include flex-center;
+
+  @include mq-min($pc-min) {
+    background-size: 100%;
+  }
+
+  @include mq-max($phone-m) {
+    background-image: url("../imgs/pattern-background-mobile.svg");
+    background-position: center top;
+  }
+}

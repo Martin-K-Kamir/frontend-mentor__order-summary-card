@@ -1,0 +1,135 @@
+.card {
+  background-color: $clr-white;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 4rem 4rem hsl(228, 87%, 39%, 15.18%);
+
+  @include mq-max($phone-max) {
+    width: 32.7rem;
+  }
+
+  @include mq-max($phone-min) {
+    width: 30rem;
+    margin: 1rem 0;
+  }
+
+  &__main {
+    padding: 0 4.7rem 3.4rem 4.7rem;
+    @include flex-col-center;
+
+    @include mq-max($phone-max) {
+      padding: 0 2.4rem 1.7rem 2.4rem;
+    }
+  }
+
+  &__title,
+  &__par {
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 3.4rem;
+    margin-bottom: 1.7rem;
+    font-size: 2.8rem;
+    font-weight: $fw-max;
+    color: $clr-blue-200;
+
+    @include mq-max($phone-max) {
+      margin-top: 2.4rem;
+      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+    }
+
+    @include mq-max($phone-min) {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__par {
+    color: $clr-blue-500;
+    width: 30ch;
+    line-height: 1.6;
+
+    @include mq-max($phone-max) {
+      font-size: 1.5rem;
+      width: 27ch;
+    }
+
+    @include mq-max($phone-min) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__price-box {
+    width: 35.4rem;
+    padding: 2.5rem;
+    border-radius: 1.1rem;
+    background-color: $clr-blue-1000;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto 2fr auto;
+    align-items: center;
+
+    @include mq-max($phone-max) {
+      margin-top: 2.5rem;
+      padding: 1.7rem 1.6rem;
+      width: 27.9rem;
+    }
+
+    @include mq-max($phone-min) {
+      margin-top: 1.5rem;
+      padding: 1rem 1.6rem;
+      width: 25rem;
+    }
+  }
+
+  &__price-plan {
+    margin-left: 2rem;
+
+    & h6,
+    & p {
+      @include mq-max($phone-max) {font-size: 1.4rem}
+    }
+
+    & h6 {
+      color: $clr-blue-200;
+      font-weight: $fw-max;
+
+    }
+
+    & p {
+      color: $clr-blue-400;
+
+    }
+  }
+
+  &__price-change {
+    transition: all .3s ease;
+    font-weight: $fw-max;
+    color: $clr-primary-500;
+
+    font-size: 1.4rem;
+    @include mq-max($phone-max) {font-size: 1.3rem}
+
+
+    &:hover {
+      text-decoration: none;
+      color: $clr-blue-700;
+    }
+  }
+
+  &__btns {
+    margin-top: 3.2rem;
+    @include flex-col-center(1.7rem);
+
+    @include mq-max($phone-max) {
+      margin-top: 2.3rem;
+      gap: .9rem;
+    }
+
+    @include mq-max($phone-min) {
+      margin-top: 1rem;
+    }
+  }
+}

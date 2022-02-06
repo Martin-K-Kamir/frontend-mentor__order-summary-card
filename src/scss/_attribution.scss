@@ -1,0 +1,9 @@
+.attribution {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1.3rem;
+
+    @include mq-max(320px) {
+        display: none;
+    }
+}

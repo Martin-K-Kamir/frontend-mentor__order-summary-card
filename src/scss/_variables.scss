@@ -1,0 +1,27 @@
+// SECTION: Breakpoints
+$pc-min: 1440px;
+$phone-max: 470px; 
+$phone-m: 375px;
+$phone-min: 350px;
+
+// SECTION: Colors
+$clr-primary: hsl(225, 100%, 94%);
+$clr-primary-500: hsl(245, 75%, 52%);
+
+$clr-blue-1000: hsl(225, 100%, 98%);
+$clr-blue-700: hsl(245, 83%, 68%);
+$clr-blue-500: hsl(224, 23%, 55%);
+$clr-blue-400: hsl(224, 38%, 47%);
+$clr-blue-200: hsl(223, 47%, 23%);
+
+$clr-white: hsl(0, 0%, 100%);
+
+// SECTION: Font styles
+$fs-default: 1.6rem;
+
+$font-default: "Red Hat Display", sans-serif;
+
+$fw-default: 500;
+$fw-max: 900;
+$fw-b: 700;
+$fw-s: 300;

@@ -1,0 +1,31 @@
+.btn-primary {
+    width: 35.4rem;
+    @include mq-max($phone-max) {width: 27.9rem}
+    @include mq-max($phone-min) {width: 25rem}
+
+    height: 5rem;
+    background-color: $clr-primary-500;
+    border-radius: 1.1rem;
+    box-shadow: 0 2rem 2rem hsl(245, 75%, 52%, 19.03%);
+    transition: all .3s ease;
+    
+    color: $clr-white;
+    font-size: 1.5rem;
+    font-weight: $fw-b;
+
+    &:hover {
+        background-color: $clr-blue-700;
+    }
+
+    &--ghost {
+        @extend .btn-primary;
+        color: $clr-blue-500;
+        background-color: transparent;
+        box-shadow: none;
+
+        &:hover {
+            background-color: transparent;
+            color: $clr-blue-200;
+        }
+    }
+}
