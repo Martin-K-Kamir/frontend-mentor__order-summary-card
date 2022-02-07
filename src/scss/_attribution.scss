@@ -3,7 +3,11 @@
     bottom: 2rem;
     font-size: 1.3rem;
 
+    @include mq-max(350px) {
+        font-size: 1.2rem;
+    }
+    
     @include mq-max(320px) {
-        display: none;
+        display: none; // Make it hidden for very small phones
     }
 }

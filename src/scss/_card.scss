@@ -4,23 +4,22 @@
   overflow: hidden;
   box-shadow: 0 4rem 4rem hsl(228, 87%, 39%, 15.18%);
   animation: show-in .5s;
+  width: 45rem;
+  height: 69.7rem;
 
   @include mq-max($phone-max) {
     width: 32.7rem;
+    height: 56.7rem;
   }
 
   @include mq-max($phone-min) {
     width: 30rem;
-    margin: 1rem 0;
+    height: 51rem;
+    margin: 1rem 0; // For small phone screens make gap on top & bottom
   }
 
   &__main {
-    padding: 0 4.7rem 3.4rem 4.7rem;
     @include flex-col-center;
-
-    @include mq-max($phone-max) {
-      padding: 0 2.4rem 1.7rem 2.4rem;
-    }
   }
 
   &__title,
@@ -29,94 +28,120 @@
   }
 
   &__title {
-    margin-top: 3.4rem;
-    margin-bottom: 1.7rem;
-    font-size: 2.8rem;
+    $l-margin-t: 3.5rem;
+    $l-margin-b: 1.6rem;
+    $l-fs-default: 2.8rem;
+
+    margin-top: $l-margin-t;
+    margin-bottom: $l-margin-b;
+    font-size: $l-fs-default;
     font-weight: $fw-max;
     color: $clr-blue-200;
 
     @include mq-max($phone-max) {
-      margin-top: 2.4rem;
-      margin-bottom: 1.5rem;
-      font-size: 2.2rem;
+      margin-top: calc(#{$l-margin-t} - 1.2rem); // 2.3rem
+      margin-bottom: calc(#{$l-margin-b} - .1rem); // 1.5rem
+      font-size: calc(#{$l-fs-default} - .6rem); // 2.6rem
     }
 
     @include mq-max($phone-min) {
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
+      margin-top: calc(#{$l-margin-t} - 2.5rem); // 1rem
+      margin-bottom: calc(#{$l-margin-b} - 1.1rem); // .5rem
     }
   }
 
   &__par {
+    $l-fs-default: 1.6rem;
+
     color: $clr-blue-500;
+    font-size: $l-fs-default;
+    line-height: 2.6rem;
     width: 30ch;
-    line-height: 1.6;
 
     @include mq-max($phone-max) {
-      font-size: 1.5rem;
+      font-size: calc(#{$l-fs-default} - .1rem); // 1.5rem
       width: 27ch;
+      line-height: 2.5rem;
     }
 
     @include mq-max($phone-min) {
-      font-size: 1.4rem;
+      font-size: calc(#{$l-fs-default} - .2rem); // 1.4rem
     }
   }
 
-  &__price-box {
-    width: 35.4rem;
-    padding: 2.5rem;
-    border-radius: 1.1rem;
-    background-color: $clr-blue-1000;
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: auto 2fr auto;
-    align-items: center;
+  &__price {
 
-    @include mq-max($phone-max) {
-      margin-top: 2.5rem;
-      padding: 1.7rem 1.6rem;
-      width: 27.9rem;
+    &-box {
+      display: grid;
+      grid-template-columns: auto 2fr auto;
+      align-items: center;
+
+      border-radius: 1.1rem;
+      background-color: $clr-blue-1000;
+      
+      margin-top: 1.9rem;
+      padding: 2.3rem 2.4rem;
+      width: 35.4rem;
+      height: 9.8rem;
+
+      @include mq-max($phone-max) {
+        margin-top: 2.3rem;
+        padding: 1.7rem 1.6rem;
+        width: 27.9rem;
+        height: 8.1rem;
+      }
+
+      @include mq-max($phone-min) {
+        margin-top: 1.5rem;
+        padding: 1rem 1.6rem;
+        width: 25rem;
+      }
     }
 
-    @include mq-max($phone-min) {
-      margin-top: 1.5rem;
-      padding: 1rem 1.6rem;
-      width: 25rem;
-    }
-  }
-
-  &__price-plan {
-    margin-left: 2rem;
-
-    & h6,
-    & p {
-      @include mq-max($phone-max) {font-size: 1.4rem}
+    &-icon {
+      margin-bottom: .1rem; // Just to make it pixel perfetct
     }
 
-    & h6 {
-      color: $clr-blue-200;
+    &-plan {
+      margin-left: 2rem;
+
+      & h6,
+      & p {
+        @include mq-max($phone-max) {font-size: 1.4rem}
+      }
+
+      & h6 {
+        color: $clr-blue-200;
+        font-weight: $fw-max;
+        margin-bottom: .3rem;
+
+        @include mq-max($phone-max) {margin-bottom: 0}
+      }
+
+      & p {
+        color: $clr-blue-400;
+      }
+    }
+
+    &-change {
+      transition: all .3s ease;
+      color: $clr-primary-500;
       font-weight: $fw-max;
+      
+      font-size: 1.4rem;
+      text-decoration-thickness: .2rem;
+      text-underline-offset: .2rem;
 
-    }
+      @include mq-max($phone-max) {
+        font-size: 1.3rem;
+        text-decoration-thickness: .1rem;
+        text-underline-offset: .1rem;
+      }
 
-    & p {
-      color: $clr-blue-400;
-
-    }
-  }
-
-  &__price-change {
-    transition: all .3s ease;
-    font-weight: $fw-max;
-    color: $clr-primary-500;
-
-    font-size: 1.4rem;
-    @include mq-max($phone-max) {font-size: 1.3rem}
-
-
-    &:hover {
-      text-decoration: none;
-      color: $clr-blue-700;
+      &:hover {
+        text-decoration: none;
+        color: $clr-blue-700;
+      }
     }
   }
 
@@ -125,12 +150,12 @@
     @include flex-col-center(1.7rem);
 
     @include mq-max($phone-max) {
-      margin-top: 2.3rem;
+      margin-top: 2.4rem;
       gap: .9rem;
     }
 
     @include mq-max($phone-min) {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
   }
 }

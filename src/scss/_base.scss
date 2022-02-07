@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+button {
+  font-family: $font-default;;
+}
+
 .body-container {
   position: relative;
   min-height: 100vh;
@@ -20,8 +24,12 @@ html {
     background-size: 100%;
   }
 
-  @include mq-max($phone-m) {
+  @include mq-max($phone-max) {
     background-image: url("../imgs/pattern-background-mobile.svg");
     background-position: center top;
+  }
+
+  @include mq-min-max($phone-m, $phone-max) {
+    background-size: 100%;
   }
 }

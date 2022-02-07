@@ -6,7 +6,7 @@ export default function Card() {
     <div className="card">
       <img className="card__img" src={imgHero} alt="illustration-hero" />
       <div className="card__main">
-        <h3 className="card__title">Order Summary</h3>
+        <heading className="card__title">Order Summary</heading>
         <p className="card__par">
           You can now listen to millions of songs, audiobooks, and podcasts on any
           device anywhere you like!
