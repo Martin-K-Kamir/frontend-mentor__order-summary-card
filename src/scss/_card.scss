@@ -28,8 +28,8 @@
   }
 
   &__title {
-    $l-margin-t: 3.5rem;
-    $l-margin-b: 1.6rem;
+    $l-margin-t: 3.6rem;
+    $l-margin-b: 1.5rem;
     $l-fs-default: 2.8rem;
 
     margin-top: $l-margin-t;
@@ -39,14 +39,14 @@
     color: $clr-blue-200;
 
     @include mq-max($phone-max) {
-      margin-top: calc(#{$l-margin-t} - 1.2rem); // 2.3rem
-      margin-bottom: calc(#{$l-margin-b} - .1rem); // 1.5rem
+      margin-top: calc(#{$l-margin-t} - 1.2rem); // 2.4rem
+      margin-bottom: calc(#{$l-margin-b} - .1rem); // 1.4rem
       font-size: calc(#{$l-fs-default} - .6rem); // 2.6rem
     }
 
     @include mq-max($phone-min) {
-      margin-top: calc(#{$l-margin-t} - 2.5rem); // 1rem
-      margin-bottom: calc(#{$l-margin-b} - 1.1rem); // .5rem
+      margin-top: calc(#{$l-margin-t} - 2.5rem); // 1.1rem
+      margin-bottom: calc(#{$l-margin-b} - 1.1rem); // .4rem
     }
   }
 
@@ -127,7 +127,7 @@
       transition: all .3s ease;
       color: $clr-primary-500;
       font-weight: $fw-max;
-      
+
       font-size: 1.4rem;
       text-decoration-thickness: .2rem;
       text-underline-offset: .2rem;
